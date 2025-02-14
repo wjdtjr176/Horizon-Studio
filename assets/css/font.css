@@ -1,0 +1,41 @@
+
+
+
+
+
+@font-face {
+    font-family: "Overusedgrotesk";
+    src: url(../font/659538b4161f3d42f456bb14_OverusedGrotesk-Roman.woff2) format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Overusedgrotesk";
+    src: url(../font/659538b4213b8aafa5dea62e_OverusedGrotesk-Italic.woff2) format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Overusedgrotesk";
+    src: url(../font/659538b47a4d47c6feb91e87_OverusedGrotesk-Book.woff2) format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Overusedgrotesk";
+    src: url(../font/659538b49abd68431d2371d6_OverusedGrotesk-Medium.woff2) format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Overusedgrotesk";
+    src: url(../font/659538b4e3eee3cf042633d7_OverusedGrotesk-SemiBold.woff2) format('woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "MrDeHaviland";
+    src: url(../font/659bd38471c1a5dd5056faa9_MrDeHaviland-Regular.woff2) format('woff2');
+    font-weight: 400;
+}

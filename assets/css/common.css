@@ -1,0 +1,352 @@
+
+
+
+
+
+
+
+.blind{
+    position: absolute;   
+    width: 1px;height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+body.no-scroll{
+    overflow: hidden;
+}
+
+
+.hov{
+    position: relative;
+}
+.hov::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    content: '';
+    transform: scaleX(0);
+    transition: transform .3s;
+    transform-origin: right;
+}
+.hov:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.hov-white{
+    position: relative;
+}
+.hov-white::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    content: '';
+    transform: scaleX(0);
+    transition: transform .3s;
+    transform-origin: right;
+}
+.hov-white:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+
+.loading{
+    display: flex;
+    position: fixed;
+    top: 0;left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.loading .line{
+    position: relative;
+    flex: 1;
+}
+.loading .line .cont{
+    background: #222;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.loading .line:nth-child(2n) .cont{
+    top: 0;
+    bottom: auto;
+}
+
+.loading .logo{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    overflow: hidden;
+}
+.loading .logo-txt:nth-child(1){
+    font-weight: 600;
+}
+.loading .logo-txt:nth-child(2){
+    font-weight: 200;
+}
+.loading .logo-dot{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    margin-top: 20px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sub-headline{
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    color: #f8fafc;
+}
+.sub-headline::before{
+    margin-top: 5px;
+    width: 5px;
+    height: 5px;
+    content: '';
+    border-radius: 100%;
+    background: #f8fafc;
+}
+
+.order{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+    border: 1px solid #f8fafc;
+    color: #f8fafc;
+    font-size: 12.6px;
+}
+
+
+
+.headline{
+    display: flex;
+    color: #333;
+    font-size: 5vw;
+    font-weight: 500;
+    letter-spacing: -.25svw;
+    line-height: 1.2;
+    overflow: hidden;
+}
+
+
+.link-more{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    border: 1px solid #000;
+    border-radius: 1600px;
+    height: 38px;
+    padding: 9px 18px;
+    font-size: 18px;
+    overflow: hidden;
+}
+.link-more::after{
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    content: '';
+    transition: .3s;
+}
+.link-more:hover::after{
+    height: 100%;
+}
+.link-more:hover .text span{
+    transform: translateY(-100%);
+}
+.link-more:hover .text span:last-child{
+    transform: translateY(0);
+}
+.link-more .text{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.link-more .text span{
+    display: block;
+    transition: .3s;
+}
+.link-more .text span:last-child{
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    transform: translateY(100%);
+    color: #fff;
+}
+.link-more .arrow{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.link-more svg{
+    width: 18px;
+    height: 18px;
+    color: #222;
+    transition: .3s;
+}
+.link-more svg:last-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+.link-more svg:last-child path{
+    fill: #fff;
+}
+.link-more:hover svg{
+    transform: translateX(100%);
+}
+.link-more:hover svg:last-child{
+    transform: translateX(0);
+}
+
+.link-more.white{
+    color: #fff;
+    border: 1px solid #fff;
+    opacity: 0;
+}
+.link-more.white::after{
+    background: #fff;
+}
+.link-more.white .text span:last-child{
+    color: #000;
+}
+.link-more.white .arrow{
+    z-index: 1;
+}
+.link-more.white svg{
+    color: #fff;
+}
+.link-more.white svg:last-child path{
+    fill: #000;
+}
+
+
+
+
+
+
+
+
+
+.award-fixed{
+    position: fixed;
+    z-index: 999;
+    transform: translateY(-50%);
+    top: 20%;
+    right: 0;
+    display: flex;
+    width: 196px;
+    transform: translateX(140px);
+    transition: .8s;
+}
+.award-fixed.active{
+    transform: translateY(0);
+}
+.award-fixed.active .text{
+    opacity: 0;
+}
+.award-fixed::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: #80A8BA;
+    content: '';
+}
+.award-fixed .logo{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.award-fixed .text{
+    position: absolute;
+    bottom: 12px;
+    left: 25px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 18px;
+    transition: .3s;
+}
+.award-fixed .mid-text{
+    position: absolute;
+    top: 35%;
+    left: 25px;
+    font-size: 27px;
+    opacity: 0;
+    transition: .3s;
+}
+.award-fixed.active .mid-text{
+    opacity: 1;
+}
+.award-fixed .ft-text{
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+    font-size: 12px;
+    line-height: 14px;
+    opacity: 0;
+    transition: .3s;
+}
+.award-fixed.active .ft-text{
+    opacity: 1;
+}
+.award-fixed .date{
+    font-size: 12px;
+    line-height: 14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: .3s;
+}
+.award-fixed.active .date{
+    opacity: 1;
+}
+
+
+
+
+.honor-fixed{
+    position: fixed;
+    z-index: 999;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+}
